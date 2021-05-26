@@ -23,4 +23,9 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
         _rigidbody.MovePosition(transform.position + _velocity);
     }
+
+    public void Move(Vector3 direction)
+    {
+        _velocity = direction * _moveSpeed * Time.deltaTime;
+    }
 }
